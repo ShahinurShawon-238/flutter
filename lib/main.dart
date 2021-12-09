@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'pages/home.dart';
 import 'pages/login.dart';
 
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
     
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         "/": (context)=>LoginPage(),
-        "/home": (context)=>HomePage(),
+        "/home": (context)=>const HomePage(),
         "/login": (context)=>LoginPage(),
       },
     );
